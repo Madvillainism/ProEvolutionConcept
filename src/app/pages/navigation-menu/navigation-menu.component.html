@@ -1,0 +1,13 @@
+<main>
+  <h1>Welcome to the store!</h1>
+  <section>
+    @for(option of options; track $index){
+    <div>
+      <img src="{{ option.image }}" alt="Purple Man" />
+      <h3>
+        {{ option.title }}
+      </h3>
+    </div>
+    }
+  </section>
+</main>
