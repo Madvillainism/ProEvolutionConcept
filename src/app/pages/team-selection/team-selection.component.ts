@@ -8,6 +8,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeamSelectionComponent implements OnInit {
   ngOnInit() {
-    alert('team-selection works!');
+    //alert('team-selection works!');
   }
 }

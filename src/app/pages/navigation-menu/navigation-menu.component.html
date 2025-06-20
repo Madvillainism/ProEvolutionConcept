@@ -1,8 +1,8 @@
 <main>
-  <h1>Welcome to the store!</h1>
+  <h1>THE STORE</h1>
   <section>
     @for(option of options; track $index){
-    <div>
+    <div (click)="navigateTo(option.route)">
       <img src="{{ option.image }}" alt="Purple Man" />
       <h3>
         {{ option.title }}

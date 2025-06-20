@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navigation-menu',
@@ -10,23 +11,30 @@ export class NavigationMenuComponent {
   options = [
     {
       title: 'Home',
-      description: '/home',
-      image: '/assets/letras-mura.png',
+      route: '/home',
+      image: '/assets/background.png',
     },
     {
       title: 'Mercancia',
-      description: '/team-selection',
+      route: '/team-selection',
       image: '/assets/merca.png',
     },
     {
       title: 'Cosplay',
-      description: '/navigation-menu',
+      route: '/navigation-menu',
       image: '/assets/cosplay.png',
     },
     {
       title: 'Events',
-      description: '/home',
+      route: '/home',
       image: '/assets/eventos.png',
     },
   ];
+
+  constructor(private router: Router) {}
+
+  // funcion para navegar a las opciones
+  navigateTo(option: string) {
+    this.router.navigateByUrl(option);
+  }
 }
