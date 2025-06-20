@@ -1,29 +1,107 @@
 <main>
   <article class="teams-container">
     <section>
-      <div>
-        <div>
-          <h2>Liga</h2>
+      <div class="horizontal-carousel-wrapper">
+        <button class="nav-button prev-button" (click)="prevItem()">
+          &#9664;
+        </button>
+        <div class="carousel-viewport">
+          <div
+            class="carousel-items-container"
+            [style.transform]="
+              'translateX(' + currentIndexCategory * -itemWidthCategory + 'px)'
+            "
+          >
+            @for(category of categories; track $index){
+            <div class="carousel-item">
+              <!-- <img [src]="category.url" [alt]="category.name" /> -->
+              <h2>{{ category }}</h2>
+            </div>
+            }
+          </div>
         </div>
-        <div>
-          <h2>Equipo</h2>
-          <img src="" alt="" />
-        </div>
+        <button class="nav-button next-button" (click)="nextItem()">
+          &#9654;
+        </button>
       </div>
+      <!--   <div class="vertical-carousel-wrapper">
+        <button class="nav-button prev-button" (click)="prevTeam()">
+          &#9650;
+        </button>
+        <div class="carousel-viewport">
+          <div
+            class="carousel-items-container"
+            [style.transform]="
+              'translateY(' + currentIndexProduct * -itemHeight + 'px)'
+            "
+          >
+            @for(product of selectedCategory; track $index){
+            <div class="carousel-item">
+              <img [src]="product.url" [alt]="product.name" />
+              <p>{{ product.name }}</p>
+            </div>
+            }
+          </div>
+        </div>
+        <button class="nav-button next-button" (click)="nextTeam()">
+          &#9660;
+        </button>
+      </div> -->
     </section>
     <div>
-      <h1>VS</h1>
+      <img class="vs-banner" src="/products/versusflag.png" alt="Versus" />
     </div>
     <section>
-      <div>
-        <div>
-          <h2>Liga</h2>
+      <div class="horizontal-carousel-wrapper">
+        <button class="nav-button prev-button" (click)="prevItem()">
+          &#9664;
+        </button>
+        <div class="carousel-viewport">
+          <div
+            class="carousel-items-container"
+            [style.transform]="
+              'translateX(' + currentIndexCategory * -itemWidthCategory + 'px)'
+            "
+          >
+            @for(category of categories; track $index){
+            <div class="carousel-item">
+              <!-- <img [src]="category.url" [alt]="category.name" /> -->
+              <h2>{{ category }}</h2>
+            </div>
+            }
+          </div>
         </div>
-        <div>
-          <h2>Equipo</h2>
-          <img src="" alt="" />
-        </div>
+        <button class="nav-button next-button" (click)="nextItem()">
+          &#9654;
+        </button>
       </div>
+      <!--    <div class="vertical-carousel-wrapper">
+        <button class="nav-button prev-button" (click)="prevTeam()">
+          &#9650;
+        </button>
+        <div class="carousel-viewport">
+          <div
+            class="carousel-items-container"
+            [style.transform]="
+              'translateY(' + currentIndexProduct * -itemHeight + 'px)'
+            "
+          >
+            @for(product of selectedCategory; track $index){
+            <div class="carousel-item">
+              <img
+                class="product-img"
+                [src]="product.url"
+                [alt]="product.name"
+              />
+              <p>{{ product.name }}</p>
+            </div>
+            }
+          </div>
+        </div>
+        <button class="nav-button next-button" (click)="nextTeam()">
+          &#9660;
+        </button>
+      </div> -->
     </section>
   </article>
   <h4>© 2025 Murasaki Development</h4>

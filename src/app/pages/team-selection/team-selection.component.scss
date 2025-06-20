@@ -15,8 +15,18 @@ main {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  //width: 100%;
   height: 100%;
+}
+
+.product-img {
+  width: 200px;
+  height: 200px;
+}
+
+.vs-banner {
+  width: 200px;
+  height: 100px;
 }
 
 h4 {
@@ -25,4 +35,70 @@ h4 {
   right: 0;
   margin: 10px;
   color: #252525;
+}
+
+.horizontal-carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px; /* Ancho total del carrusel con botones */
+  margin: 20px auto;
+}
+
+.vertical-carousel-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px; /* Ancho total del carrusel con botones */
+  //margin: 20px auto;
+}
+
+.nav-button {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1.5em;
+  border-radius: 5px;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.carousel-viewport {
+  width: 400px; /* Ancho visible del carrusel (2 items de 200px) */
+  height: 100px; /* Altura del viewport */
+  overflow: hidden; /* Oculta lo que está fuera del viewport */
+  position: relative;
+  margin: 0 10px; // Espacio entre botones y viewport
+}
+
+.carousel-items-container {
+  display: flex;
+  height: 100%;
+  transition: transform 0.3s ease-in-out; /* Transición para el desplazamiento */
+}
+
+.carousel-item {
+  flex-shrink: 0; /* Evita que los ítems se encojan */
+  width: 400px; /* Ancho de cada ítem */
+  height: 100px; /* Altura de cada ítem */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 0.9em;
+  text-align: center;
+
+  img {
+    max-width: 100px; /* Tamaño del logo */
+    max-height: 100px;
+    //object-fit: contain;
+    margin-bottom: 5px;
+  }
 }
